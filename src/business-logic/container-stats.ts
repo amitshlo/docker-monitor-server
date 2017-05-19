@@ -29,6 +29,7 @@ export class ContainerStatsBusinessLogic {
             id: container.Id,
             name: container.Names[0],
             state: container.State,
+            status: container.Status,
             stats: stats
         };
     }
@@ -61,6 +62,7 @@ interface ContainerData {
     id: string;
     name: string;
     state: string;
+    status: string;
     stats: ContainerUsageStats;
 }
 
