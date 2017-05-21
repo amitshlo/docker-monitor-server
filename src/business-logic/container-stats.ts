@@ -1,6 +1,6 @@
-import * as request from 'request';
-import {hosts} from '../assets/config';
 let fetch = require('node-fetch');
+
+const hosts:string[] = process.env.DM_HOSTS ? JSON.parse(process.env.DM_HOSTS) : ['localhost:2375'];
 
 export class ContainerStatsBusinessLogic {
 

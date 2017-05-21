@@ -4,8 +4,7 @@ import * as bodyParser from 'body-parser';
 import {ContainerStatsAPI} from './api/container-stats';
 import {ContainerActionsAPI} from './api/container-actions';
 
-// TODO - move to config
-const APPLICATION_PORT = 1111;
+const APPLICATION_PORT = process.env.DM_PORT ? process.env.DM_PORT : 1111;
 
 const app:express.Application = express();
 app.use(cors());
